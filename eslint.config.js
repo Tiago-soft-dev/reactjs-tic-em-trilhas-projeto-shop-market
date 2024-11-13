@@ -5,9 +5,9 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { ignores: ['dist', 'prettier.config.cjs'] },
+  { ignores: ['dist', 'prettier.config.cjs', 'tailwind.config.cjs', 'postcss.config.cjs', 'vite.config.ts', ] },
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended, tailwindcss.configs.recomended ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
