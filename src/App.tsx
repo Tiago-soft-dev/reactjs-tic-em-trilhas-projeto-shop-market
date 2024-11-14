@@ -3,13 +3,17 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
  
 import { Header } from './app/components/Header'
+import { Home } from './app/view/Home'
 
 function App() {
  
   const routeHeader = createBrowserRouter([
     {
       path: '/',
-      element: <Header />
+      element: <>
+        <Header /> 
+        <Home />
+      </>
     }
   ])
   return (
